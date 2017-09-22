@@ -9,7 +9,7 @@ from django.views import generic
 
 # Create your views here.
 class IndexView(generic.ListView):
-    template_name = 'polls/index.html'
+    template_name = 'Hakemus/index.html'
     context_object_name = 'latest_question_list'
 
     def get_queryset(self):
@@ -18,12 +18,12 @@ class IndexView(generic.ListView):
 
 class DetailView(generic.DetailView):
     model = Question
-    template_name = 'polls/detail.html'
+    template_name = 'Hakemus/detail.html'
 
 
 class ResultsView(generic.DetailView):
     model = Question
-    template_name = 'polls/results.html'
+    template_name = 'Hakemus/results.html'
 
 
 def vote(request, question_id):
@@ -32,11 +32,11 @@ def vote(request, question_id):
         selected_choice = question.choice_set.get(pk=request.POST['choice'])
     except (KeyError, Choice.DoesNotExist):
         # redisplay the question voting form
-        return render(request, 'polls/detail.html', {
+        return render(request, 'hakemus/detail.html', {
             'question': question,
             'error_message': "Et valinnut vaihtoehtoa!",
         })
     else:
         selected_choice.votes += 1
         selected_choice.save()
-        return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
+        return HttpResponseRedirect(reverse('Hakemus:results', args=(question.id,)))
