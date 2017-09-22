@@ -25,7 +25,6 @@ body {
 .container_16 {
   margin-left: auto;
   margin-right: auto;
-  width: 960px;
 }
 
 /* `Grid >> Global
@@ -111,14 +110,21 @@ body {
 
 .container_12 .grid_2 {
   width: 140px;
+  left: 1000px;
 }
 
 .container_12 .grid_4 {
   width: 300px;
 }
 
-.container_12 .grid_5 {
+.container_12 .grid_5 { /* always centered */
   width: 380px;
+    float: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    align: center;
+    text-align: center;
 }
 
 .container_12 .grid_7 {
@@ -194,7 +200,6 @@ body {
 .container_12 .prefix_3,
 .container_16 .prefix_4 {
   padding-left: 240px;
-  text-align: center;
 }
 
 .container_12 .prefix_6,
@@ -212,14 +217,20 @@ body {
 
 .container_12 .prefix_1 {
   padding-left: 80px;
+  width: 0%;
 }
 
 .container_12 .prefix_2 {
-  padding-left: 160px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  width: 55%;
 }
 
-.container_12 .prefix_4 {
-  padding-left: 320px;
+.container_12 .prefix_5 {
+  margin: 0 50% auto;
+  text-align: left;
+  width: 0%
 }
 
 .container_12 .prefix_5 {
@@ -227,6 +238,7 @@ body {
 }
 
 .container_12 .prefix_7 {
+  text-align: center;
   padding-left: 560px;
 }
 

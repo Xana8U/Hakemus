@@ -8,8 +8,8 @@
 <body>
 
 <div id="site-container">
-    <div id="header" class="container"
-        <div class="container_12">
+    <div id="header" class="container">
+        <div id="images" class="container_1"> <!-- no* container_1 for centered images -->
             <div id="logo" class="prefix_1 aplha">
                 <img src="/static/img/banner.jpg" alt="" />
             </div>
@@ -22,17 +22,39 @@
         </div>
         <div id="text" class="container">
             <div class="container_12">
-                <div class="grid_1 alpha">
-                    <h1><span>3 Ajankohtaista kysymystä</span></h1>
+                <div class="grid_5 alpha">
+                    <h1 class="top"><span>3 Ajankohtaista kysymystä</span></h1>
                 </div>
 
-                <div class="prefix_4 omega">
+                <div class="grid_5 alpha">
                     <p><span>Vastaa ja voita</span></p>
                 </div>
-                <div id="button" class="prefix_4 omega">
-                    <button type="button" onclick="window.location.href='http://example.com/new_url';"><span>Aloita tästä</span></button>
+                <div id="button" class="grid_5 alpha">
+                    <button type="button" onclick="window.location.href='/hakemus/questions/'"><span>Aloita tästä</span></button>
                 </div>
             </div>
+        </div>
+    </div>
+    <div id="images-green" class="container_12">
+        <div id="history-img" class="prefix_2">
+            <h1 class="history-img"><span>Historia kuva ja lorem ipsum</span></h1>
+        </div>
+        <div id="support-img" class="grid_5">
+            <h1 class="support"><span>Support kuva ja lorem ipsum</span></h1>
+        </div>
+        <div id="profile-img" class="prefix_5">
+            <h1 class="profile"><span>Profile kuva ja lorem ipsum</span></h1>
+        </div>
+    </div>
+    <div id="footer" class="container_12">
+        <div id="left-text" class="prefix_1">
+            <h1 class="footer-left"><span>tekstiä</span></h1>
+        </div>
+        <div id="middle-text" class="grid_5">
+            <h1 class="footer-middle"><span></span></h1>
+        </div>
+        <div id="right-text" class="prefix_9">
+            <h1 class="footer-right"><span></span></h1>
         </div>
     </div>
 

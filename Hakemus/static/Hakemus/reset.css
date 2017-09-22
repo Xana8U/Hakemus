@@ -158,9 +158,11 @@ button {
     cursor: pointer;
     overflow: hidden;
     outline: thin;
+    margin: 0 40 auto;
+    display: block;
     height: 80px;
     width: 300px;
-    left: 650px;
+    /*left: 650px;*/
     top: 270px;
     font-size: 25px;
     color: white;
