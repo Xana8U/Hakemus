@@ -1,13 +1,13 @@
 {% load static %}
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'Hakemus/reset.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'Hakemus/960.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'Hakemus/text.css' %}" />
+    <title>Title</title>
+</head>
+<body>
+<img src="/static/img/banner.jpg" />
 
-<link rel="stylesheet" type="text/css" href="{% static 'Hakemus/style.css' %}" />
-{% if latest_question_list %}
-    <h1>Kolme Ajankohtaista Kysymystä!</h1>
-    <ul>
-    {% for question in latest_question_list %}
-        <li><a href="{% url 'Hakemus:detail' question.id %}">{{ question.question_text }}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>Ei Kysymyksiä!</p>
-{% endif %}
+<h1>3 Ajankohtaista kysymystä</h1>
+</body>
+</html>

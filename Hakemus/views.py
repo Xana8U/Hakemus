@@ -10,6 +10,13 @@ from django.views import generic
 # Create your views here.
 class IndexView(generic.ListView):
     template_name = 'Hakemus/index.html'
+
+    def get_queryset(self):
+        return Question.objects.order_by('-pub_date')[:5]
+
+
+class QuestionsView(generic.ListView):
+    template_name = 'Hakemus/questions.html'
     context_object_name = 'latest_question_list'
 
     def get_queryset(self):
@@ -32,7 +39,7 @@ def vote(request, question_id):
         selected_choice = question.choice_set.get(pk=request.POST['choice'])
     except (KeyError, Choice.DoesNotExist):
         # redisplay the question voting form
-        return render(request, 'hakemus/detail.html', {
+        return render(request, 'Hakemus/detail.html', {
             'question': question,
             'error_message': "Et valinnut vaihtoehtoa!",
         })
