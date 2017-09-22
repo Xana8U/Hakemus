@@ -135,6 +135,7 @@ strong {
 }
 
 img {
+  position: relative;
   color: transparent;
   font-size: 0;
   vertical-align: middle;
