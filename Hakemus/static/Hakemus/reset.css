@@ -136,9 +136,12 @@ strong {
 
 img {
   position: relative;
+  display: block;
   color: transparent;
   font-size: 0;
-  vertical-align: middle;
+  align: center;
+  margin-left: auto;
+  margin-right: auto;
 /*
   For IE.
   http://css-tricks.com/ie-fix-bicubic-scaling-for-images
@@ -146,6 +149,22 @@ img {
   -ms-interpolation-mode: bicubic;
 }
 
+button {
+    position: absolute;
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: 1px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    outline: thin;
+    height: 80px;
+    width: 300px;
+    left: 650px;
+    top: 270px;
+    font-size: 25px;
+    color: white;
+}
 ol,
 ul {
   list-style: none;

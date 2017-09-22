@@ -15,6 +15,7 @@
 
 body {
   min-width: 960px;
+  background-color: dimgray;
 }
 
 /* `Container
@@ -193,6 +194,7 @@ body {
 .container_12 .prefix_3,
 .container_16 .prefix_4 {
   padding-left: 240px;
+  text-align: center;
 }
 
 .container_12 .prefix_6,
