@@ -1,0 +1,29 @@
+<head>
+     <meta http-equiv="refresh" content="1">
+     <script type="text/javascript">
+
+          <!--
+
+          function pageScroll() {
+
+
+          window.scrollBy(0,50);
+
+          scrolldelay = setTimeout('pageScroll()',1); // Speed, low = high scroll
+
+
+          }
+
+          //-->
+
+</script>
+</head>
+<body onload="pageScroll()">
+{% csrf_token %}
+
+{% for send in latest_send_list %}
+<p1>{{ send.sender }}:<br /></p1>
+<p2>{{ send.message }}<br /><br /></p2>
+{% endfor %}
+
+</body>

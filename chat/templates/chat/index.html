@@ -1,0 +1,22 @@
+{% load static %}
+<h1>{{ send.message }}</h1>
+<html>
+    <head>
+    </head>
+
+    <body>
+
+        <iframe src="messages/" seamless width="500" height="700" onload="pageScroll()"></iframe>
+
+        <form action="{% url 'chat:add' %}" method="POST">
+            {% csrf_token %}
+            <p1>Message:</p1><input type="text" name="message">
+
+            <p2>Username:</p2><input type="text" name="user">
+            <input type="submit" name="send" value="SEND">
+        </form>
+        <a href="log/">Message Log</a>
+
+    </body>
+
+</html>

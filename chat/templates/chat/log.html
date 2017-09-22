@@ -1,0 +1,13 @@
+<head>
+     <meta http-equiv="refresh" content="10">
+</head>
+<body>
+{% csrf_token %}
+<h1>PAGE REFRESHES EVERY 10 SECONDS</h1>
+
+{% for send in latest_send_list %}
+<p1>{{ send.sender }}:<br /></p1>
+<p2>{{ send.message }}<br /><br /></p2>
+{% endfor %}
+
+</body>
