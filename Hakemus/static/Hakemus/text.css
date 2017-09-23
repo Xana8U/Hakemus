@@ -39,64 +39,104 @@ h1.top {
   text-align: center;
 }
 
-h1.history{
-  position: relative;
+h1.history{ /* left */
+  position: absolute;
   font-size: 1.5vmin;
-  top: 35vmin;
+  top: 20vw;
   color: white;
-  max-width: 400px;
-  word-wrap: break-word;
-  float: left;
-}
-
-h1.support{
-  position: relative;
-  font-size: 1.5vmin;
-  top: 35vmin;
-  color: white;
-  max-width: 400px;
+  max-width: 17vw;
   word-wrap: break-word;
   float: right;
 }
 
-h1.profile{
-  position: relative;
+h1.support{ /* right */
+  position: absolute;
   font-size: 1.5vmin;
-  top: 35vmin;
+  top: 20vw;
   color: white;
-  max-width: 400px;
+  max-width: 17vw;
+  word-wrap: break-word;
+  float: right;
+}
+
+h1.profile{ /* middle */
+  position: absolute;
+  font-size: 1.5vmin;
+  top: 20vw;
+  color: white;
+  max-width: 17vw;
   word-wrap: break-word;
   float: right;
 }
 
 h1.footer-left{
-  position: relative;
-  font-size: 1vw;
-  top: 900px;
+  position: absolute;
+  font-size: 1.5vmin;
+  top: 40vw;
   color: white;
-  max-width: 300px;
+  max-width: 17vw;
   word-wrap: break-word;
+  float: right;
+}
+
+h1.footer-left:after {
+    content: " ";
+    border: 1px solid white;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    display: block;
+    max-width: 17vw;
+    width: 17vw;
 }
 
 h1.footer-middle{
-  position: relative;
-  font-size: 1vw;
-  top: 900px;
+  position: absolute;
+  font-size: 1.5vmin;
+  top: 40vw;
   color: white;
-  max-width: 300px;
+  max-width: 17vw;
   word-wrap: break-word;
-
+  float: right;
 
 }
 
 h1.footer-right{
-  position: relative;
-  font-size: 1vw;
-  top: 900px;
+  position: absolute;
+  font-size: 1.5vmin;
+  top: 40vw;
   color: white;
-  max-width: 300px;
+  max-width: 17vw;
   word-wrap: break-word;
+  float: right;
 
+}
+
+h1.q-title{
+  position: absolute;
+  font-size: 2vmin;
+  top: 19vw;
+  color: white;
+  max-width: 100vw;
+  word-wrap: break-word;
+  float: right;
+}
+
+a.questions:after{
+    content: " ";
+    display: block;
+    clear: right;
+}
+
+a.questions{
+  position: absolute;
+  font-size: 1.5vmin;
+  top: 23vw;
+  color: white;
+  max-width: 500px;
+  width: 500px;
+  word-wrap: break-word;
+  text-align: left;
+  float: left;
 }
 
 
@@ -140,7 +180,7 @@ p {
   font-size: 1.5vmin;
   left: 0;
   right: 0;
-  top: 6vw;
+  top: 5.5vw;
   align: center;
   color: white;
   text-align: center;

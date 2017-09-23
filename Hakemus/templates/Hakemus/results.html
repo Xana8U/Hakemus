@@ -1,9 +1,16 @@
+{% load static %}
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'Hakemus/reset.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'Hakemus/960.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'Hakemus/text.css' %}" />
+    <title>Hakemus</title>
+</head>
 <h1>{{ question.question_text }}</h1>
 
 <ul>
 {% for choice in question.choice_set.all %}
-    <li>{{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}</li>
+    <li>{{ choice.choice_text }} -- {{ choice.votes }} Ääntä{{ choice.votes|pluralize }}</li>
 {% endfor %}
 </ul>
 
-<a href="{% url 'Hakemus:detail' question.id %}">Vote again?</a>
+<a href="{% url 'Hakemus:detail' question.id %}">Äänestä uudelleen?</a>

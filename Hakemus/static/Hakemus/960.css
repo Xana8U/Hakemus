@@ -224,23 +224,25 @@ body {
 
 .container_12 .prefix_2 { /* left */
   text-align: left;
-  padding-left: 10%;
-  width: 300px;
+  padding-left: calc(50% - 30vw);
+  position: absolute;
 
 }
 
-.container_12 .prefix_5 { /* right */
-  padding-left: 43%;
+.container_12 .prefix_5 { /* center */
+  padding-left: calc(50% - 7.5vw);
   float: none;
   text-align: left;
-  width: 300px;
+  width: 250px;
+  position: absolute;
 }
 
 
-.container_12 .prefix_7 { /* middle */
-  padding-left: 75%;
+.container_12 .prefix_7 { /* right */
+  padding-left: calc(50% + 13vw);
   text-align: left;
-  width: 300px;
+  width: 250px;
+  position: absolute;
 }
 
 .container_12 .prefix_8 {

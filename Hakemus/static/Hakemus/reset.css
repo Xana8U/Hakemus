@@ -42,7 +42,6 @@ h5,
 h6,
 header,
 hgroup,
-hr,
 html,
 i,
 iframe,
@@ -161,25 +160,25 @@ button {
     display: block;
     height: 5vw;
     width: 15vw;
-    top: 10vw;
+    top: 8vw;
     font-size: 2vw;
     color: white;
     left: 42.5vw;
 }
-
-ol,
-ul {
-  list-style: none;
-}
-
+ul,
+ul,
 li {
-/*
-  For IE6 + IE7:
-
-  "display: list-item" keeps bullets from
-  disappearing if hasLayout is triggered.
-*/
-  display: list-item;
+    border: medium none;
+    display: block;
+    /*left: 0;*/
+    margin: 0;
+    /*position: absolute;*/
+}
+ul,
+ul {
+    overflow: visible;
+    position: absolute;
+    /*width: 0;*/
 }
 
 table {
