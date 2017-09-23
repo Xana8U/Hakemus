@@ -158,15 +158,15 @@ button {
     cursor: pointer;
     overflow: hidden;
     outline: thin;
-    margin: 0 40 auto;
     display: block;
-    height: 80px;
-    width: 300px;
-    /*left: 650px;*/
-    top: 270px;
-    font-size: 25px;
+    height: 5vw;
+    width: 15vw;
+    top: 10vw;
+    font-size: 2vw;
     color: white;
+    left: 42.5vw;
 }
+
 ol,
 ul {
   list-style: none;
