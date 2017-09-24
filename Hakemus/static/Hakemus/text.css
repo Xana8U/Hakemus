@@ -32,7 +32,7 @@ h1.top {
   left: 0;
   right: 0;
   top: 2vw;
-  font-size: 2vmin;
+  font-size: 3.5vmin;
   color: white;
   max-width: 500px
   margin: auto;
@@ -42,7 +42,7 @@ h1.top {
 h1.history{ /* left */
   position: absolute;
   font-size: 1.5vmin;
-  top: 20vw;
+  top: 26vw;
   color: white;
   max-width: 17vw;
   word-wrap: break-word;
@@ -52,7 +52,7 @@ h1.history{ /* left */
 h1.support{ /* right */
   position: absolute;
   font-size: 1.5vmin;
-  top: 20vw;
+  top: 26vw;
   color: white;
   max-width: 17vw;
   word-wrap: break-word;
@@ -62,7 +62,18 @@ h1.support{ /* right */
 h1.profile{ /* middle */
   position: absolute;
   font-size: 1.5vmin;
-  top: 20vw;
+  top: 26vw;
+  color: white;
+  max-width: 17vw;
+  word-wrap: break-word;
+  float: right;
+}
+
+a.return-q {
+  position: absolute;
+  font-size: 1.5vmin;
+  top: 37vw;
+  margin-left: 1.7vw;
   color: white;
   max-width: 17vw;
   word-wrap: break-word;
@@ -72,7 +83,7 @@ h1.profile{ /* middle */
 h1.footer-left{
   position: absolute;
   font-size: 1.5vmin;
-  top: 40vw;
+  top: 52vw;
   color: white;
   max-width: 17vw;
   word-wrap: break-word;
@@ -90,9 +101,9 @@ h1.footer-left:after {
 }
 
 h1.footer-middle{
-  position: absolute;
+   position: absolute;
   font-size: 1.5vmin;
-  top: 40vw;
+  top: 52vw;
   color: white;
   max-width: 17vw;
   word-wrap: break-word;
@@ -103,7 +114,7 @@ h1.footer-middle{
 h1.footer-right{
   position: absolute;
   font-size: 1.5vmin;
-  top: 40vw;
+  top: 52vw;
   color: white;
   max-width: 17vw;
   word-wrap: break-word;
@@ -113,10 +124,11 @@ h1.footer-right{
 
 h1.q-title{
   position: absolute;
-  font-size: 2vmin;
-  top: 19vw;
+  font-size: 2.5vmin;
+  top: 26vw;
   color: white;
-  width: 500px;
+  max-width: 100vw;
+  width: 100vw;
   word-wrap: break-word;
   float: right;
 }
@@ -131,27 +143,38 @@ a.questions:after{
 */
 
 ul.q-list{
-    display: inline-block;
-    position: absolute;
-    font-size: 1.5vmin;
-    top: 23vw;
-    color: white;
-    width: 1000px;
-    word-wrap: break-word;
-    text-align: left;
-    float: left;
+  position: absolute;
+  font-size: 2vmin;
+  top: 31vw;
+  color: white;
+  max-width:100vw;
+  width: 100vw;
+  word-wrap: break-word;
+  float: right;
+  list-style-type:none;
+}
+ul.q-list-p{
+  position: absolute;
+  font-size: 2vmin;
+  top: 31vw;
+  color: white;
+  max-width:100vw;
+  width: 100vw;
+  word-wrap: break-word;
+  float: right;
+  margin-left: 16vw;
+  list-style-type:none;
 }
 
 form.choice{
-    display: inline-block;
-    position: absolute;
-    font-size: 1.5vmin;
-    top: 23vw;
-    color: white;
-    width: 1000px;
-    word-wrap: break-word;
-    text-align: left;
-    float: left;
+  position: absolute;
+  font-size: 1.5vmin;
+  top: 31vw;
+  color: white;
+  max-width:100vw;
+  width: 100vw;
+  word-wrap: break-word;
+  float: right;
 }
 
 h2 {
@@ -191,17 +214,24 @@ li {
 
 p {
   position: absolute;
-  font-size: 1.5vmin;
+  font-size: 1.3vw;
   left: 0;
   right: 0;
-  top: 5.5vw;
+  top: 6.5vw;
   align: center;
   color: white;
   text-align: center;
 }
 
+hr.hr-1{
+  display:block;
+  border-width: 1px;
+  margin-left: calc(50% - 40vw);
+  margin-top:60vw;
+  max-width: 17vw;
+  color: white;
+}
 dl,
-hr,
 h1,
 h2,
 h3,

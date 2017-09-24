@@ -5,50 +5,134 @@
     <link rel="stylesheet" type="text/css" href="{% static 'Hakemus/text.css' %}" />
     <title>Vastaukset</title>
 </head>
-<h1>{{ question.question_text }}</h1>
-<ul class="q-perc" style="padding-left: 200px;">testi</ul>
-<ul>
-{% for choice in question.choice_set.all %}
-    <li>{{ choice.choice_text }} -- {{ choice.votes }} Ääntä</li>
-{% endfor %}
+<div id="questions" class="container_12">
+     <div id="header" class="container">
+        <div id="text" class="container">
+            <div class="container_12">
+                <div class="grid_5 alpha">
+                    <h1 class="top"><span>3 Ajankohtaista kysymystä</span></h1>
+                </div>
+            </div>
+        </div>
+     </div>
+    <div id="result-container">
+        <div id="question" class="prefix_2">
+            <h1 class="q-title">{{ question.question_text }}</h1>
+        </div>
+        <div id="results" class="prefix_2">
+            <ul class="q-list">
+                {% for choice in question.choice_set.all %}
+                <li>{{ choice.choice_text }} -- {{ choice.votes }} Ääntä</li>
+                {% endfor %}
+            </ul>
+                <ul class="q-list-p" hidden>
+                <!--{% for choice in question.choice_set.all|slice:":1" %}
+                {{ choice.votes }}
+                {% endfor %}
 
-    {% for choice in question.choice_set.all|slice:":1" %}
-    {{ choice.votes }}
-    {% endfor %}
+                {% for choice in question.choice_set.all|slice:"1:2" %}
+                {{ choice.votes }}
+                {% endfor %}
 
-    {% for choice in question.choice_set.all|slice:"1:2" %}
-    {{ choice.votes }}
-    {% endfor %}
+                {% for choice in question.choice_set.all|slice:"2:" %}
+                {{ choice.votes }}
+                {% endfor %}-->
+                <li><script type="text/javascript">
+                         var sum = [{% for choice in question.choice_set.all|slice:":1" %}
+                                    {{ choice.votes }}
+                                    {% endfor %},{% for choice in question.choice_set.all|slice:"1:2" %}
+                                    {{ choice.votes }}
+                                    {% endfor %},{% for choice in question.choice_set.all|slice:"2:" %}
+                                    {{ choice.votes }}
+                                    {% endfor %}].reduce(add, 0);
 
-    {% for choice in question.choice_set.all|slice:"2:" %}
-    {{ choice.votes }}
-    {% endfor %}
-    <script type="text/javascript">
-            var sum = [{% for choice in question.choice_set.all|slice:":1" %}
-                        {{ choice.votes }}
-                        {% endfor %},{% for choice in question.choice_set.all|slice:"1:2" %}
-                        {{ choice.votes }}
-                        {% endfor %},{% for choice in question.choice_set.all|slice:"2:" %}
-                        {{ choice.votes }}
-                        {% endfor %}].reduce(add, 0);
+                         function add(a, b) {
+                         return a + b;
+                         }
 
-            function add(a, b) {
-                return a + b;
-}
+                         function countPercent(){
+                         var x = [{% for choice in question.choice_set.all|slice:":1" %}
+                                  {{ choice.votes }}
+                                  {% endfor %}];
 
-            function countPercent(){
-                var x = [{% for choice in question.choice_set.all|slice:":1" %}
-                        {{ choice.votes }}
-                        {% endfor %}];
+                         percent = x/sum * 100;
+                         nofloat = parseInt(percent)
 
-                percent = x/sum * 100;
-                nofloat = parseInt(percent)
+                         document.write(nofloat, '%');
 
-                document.write(nofloat);
+                         }
+                         countPercent();
+                </script> Annetuista äänistä</li>
 
-            }
-            countPercent();
-    </script>
-</ul>
+                   <li><script type="text/javascript">
+                         var sum = [{% for choice in question.choice_set.all|slice:":1" %}
+                                    {{ choice.votes }}
+                                    {% endfor %},{% for choice in question.choice_set.all|slice:"1:2" %}
+                                    {{ choice.votes }}
+                                    {% endfor %},{% for choice in question.choice_set.all|slice:"2:" %}
+                                    {{ choice.votes }}
+                                    {% endfor %}].reduce(add, 0);
 
-<a href="{% url 'Hakemus:detail' question.id %}">Äänestä uudelleen?</a>
+                         function add(a, b) {
+                         return a + b;
+                         }
+
+                         function countPercent(){
+                         var x = [{% for choice in question.choice_set.all|slice:"1:2" %}
+                                  {{ choice.votes }}
+                                  {% endfor %}];
+
+                         percent = x/sum * 100;
+                         nofloat = parseInt(percent)
+
+                         document.write(nofloat, '%');
+
+                         }
+                         countPercent();
+                    </script> Annetuista äänistä</li>
+
+                    <li><script type="text/javascript">
+                         var sum = [{% for choice in question.choice_set.all|slice:":1" %}
+                                    {{ choice.votes }}
+                                    {% endfor %},{% for choice in question.choice_set.all|slice:"1:2" %}
+                                    {{ choice.votes }}
+                                    {% endfor %},{% for choice in question.choice_set.all|slice:"2:" %}
+                                    {{ choice.votes }}
+                                    {% endfor %}].reduce(add, 0);
+
+                         function add(a, b) {
+                         return a + b;
+                         }
+
+                         function countPercent(){
+                         var x = [{% for choice in question.choice_set.all|slice:"2:" %}
+                                  {{ choice.votes }}
+                                  {% endfor %}];
+
+                         percent = x/sum * 100;
+                         nofloat = parseInt(percent)
+
+                         document.write(nofloat, '%');
+
+                         }
+                         countPercent();
+                    </script> Annetuista äänistä</li>
+                </ul>
+            <a class="return-q" href="{% url 'Hakemus:questions' %}">Palaa kysymyksiin?</a>
+            </div>
+        </div>
+    <div id="footer" class="container_12">
+        <div id="left-text" class="prefix_2">
+
+            <h1 class="footer-left"><span>teksti123123123123123131231231231231231231231231231231231231231231231231231231231231231231231231231231231ä</span></h1>
+            <h1 class="footer-left"><br /><br /><br /><br /><span>hr erottajakin alapuolella</span></h1>
+
+        </div>
+        <div id="middle-text" class="prefix_5">
+            <h1 class="footer-middle"><span>tekstiä</span></h1>
+        </div>
+        <div id="right-text" class="prefix_7">
+            <h1 class="footer-right"><span>tekstiä</span></h1>
+        </div>
+    </div>
+</div><hr class="hr-1">
