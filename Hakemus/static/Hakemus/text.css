@@ -121,12 +121,14 @@ h1.q-title{
   float: right;
 }
 
+/*
 a.questions:after{
     content: " ";
     display: block;
     clear: right;
 
 }
+*/
 
 ul.q-list{
     display: inline-block;
@@ -140,6 +142,17 @@ ul.q-list{
     float: left;
 }
 
+form.choice{
+    display: inline-block;
+    position: absolute;
+    font-size: 1.5vmin;
+    top: 23vw;
+    color: white;
+    width: 1000px;
+    word-wrap: break-word;
+    text-align: left;
+    float: left;
+}
 
 h2 {
   font-size: 23px;
