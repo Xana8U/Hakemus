@@ -6,11 +6,49 @@
     <title>Hakemus</title>
 </head>
 <h1>{{ question.question_text }}</h1>
-
+<ul class="q-perc" style="padding-left: 200px;">testi</ul>
 <ul>
 {% for choice in question.choice_set.all %}
-    <li>{{ choice.choice_text }} -- {{ choice.votes }} Ääntä{{ choice.votes|pluralize }}</li>
+    <li>{{ choice.choice_text }} -- {{ choice.votes }} Ääntä</li>
 {% endfor %}
+
+    {% for choice in question.choice_set.all|slice:":1" %}
+    {{ choice.votes }}
+    {% endfor %}
+
+    {% for choice in question.choice_set.all|slice:"1:2" %}
+    {{ choice.votes }}
+    {% endfor %}
+
+    {% for choice in question.choice_set.all|slice:"2:" %}
+    {{ choice.votes }}
+    {% endfor %}
+    <script type="text/javascript">
+            var sum = [{% for choice in question.choice_set.all|slice:":1" %}
+                        {{ choice.votes }}
+                        {% endfor %},{% for choice in question.choice_set.all|slice:"1:2" %}
+                        {{ choice.votes }}
+                        {% endfor %},{% for choice in question.choice_set.all|slice:"2:" %}
+                        {{ choice.votes }}
+                        {% endfor %}].reduce(add, 0);
+
+            function add(a, b) {
+                return a + b;
+}
+
+            function countPercent(){
+                var x = [{% for choice in question.choice_set.all|slice:":1" %}
+                        {{ choice.votes }}
+                        {% endfor %}];
+
+                percent = x/sum * 100;
+                nofloat = parseInt(percent)
+
+                document.write(nofloat);
+
+            }
+            countPercent();
+    </script>
 </ul>
 
 <a href="{% url 'Hakemus:detail' question.id %}">Äänestä uudelleen?</a>

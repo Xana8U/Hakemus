@@ -165,21 +165,25 @@ button {
     color: white;
     left: 42.5vw;
 }
-ul,
-ul,
-li {
-    border: medium none;
-    display: block;
-    /*left: 0;*/
-    margin: 0;
-    /*position: absolute;*/
-}
-ul,
-ul {
-    overflow: visible;
+
+ul.q-perc {
     position: absolute;
-    /*width: 0;*/
+
+/*
+  For IE6 + IE7:
+
+  "display: list-item" keeps bullets from
+  disappearing if hasLayout is triggered.
+*/
+
 }
+
+ol,
+ul {
+    display: inline-block;
+}
+
+
 
 table {
   border-collapse: collapse;

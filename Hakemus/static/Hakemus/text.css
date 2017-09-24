@@ -116,7 +116,7 @@ h1.q-title{
   font-size: 2vmin;
   top: 19vw;
   color: white;
-  max-width: 100vw;
+  width: 500px;
   word-wrap: break-word;
   float: right;
 }
@@ -125,18 +125,19 @@ a.questions:after{
     content: " ";
     display: block;
     clear: right;
+
 }
 
-a.questions{
-  position: absolute;
-  font-size: 1.5vmin;
-  top: 23vw;
-  color: white;
-  max-width: 500px;
-  width: 500px;
-  word-wrap: break-word;
-  text-align: left;
-  float: left;
+ul.q-list{
+    display: inline-block;
+    position: absolute;
+    font-size: 1.5vmin;
+    top: 23vw;
+    color: white;
+    width: 1000px;
+    word-wrap: break-word;
+    text-align: left;
+    float: left;
 }
 
 

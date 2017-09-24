@@ -39,7 +39,7 @@ def vote(request, question_id):
         selected_choice = question.choice_set.get(pk=request.POST['choice'])
     except (KeyError, Choice.DoesNotExist):
         # redisplay the question voting form
-        return render(request, 'Hakemus/detail.html', {
+        return render(request, 'Hakemus/questions/detail.html', {
             'question': question,
             'error_message': "Et valinnut vaihtoehtoa!",
         })
